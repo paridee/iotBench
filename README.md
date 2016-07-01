@@ -1,4 +1,4 @@
-## Benchmarks for IoT [VLDB/TPCTC-2016]
+## Benchmarks for IoT 
 ### IoT  Micro-benchmarks 
 | Task Name  | Category |
 | ------------- | ------------- |
