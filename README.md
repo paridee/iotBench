@@ -1,4 +1,4 @@
-## Benchmarks for IoT 
+## IoT Benchmark using Apache Storm [VLDB/TPCTC-2016]
 ### IoT  Micro-benchmarks 
 | Task Name  | Category |
 | ------------- | ------------- |
@@ -22,6 +22,8 @@
 | Pre-processing & statistical summarization dataflow  | STATS   |
 | Predictive Analytics dataflow   | PRED   |
 
+
+![FCAST](https://github.com/anshuiisc/FIG/blob/master/STATS-and-PRED.png)
 
 - Steps to run benchmark's
 - Once cloned  run 
