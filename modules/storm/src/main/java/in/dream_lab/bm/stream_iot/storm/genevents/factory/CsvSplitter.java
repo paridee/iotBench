@@ -23,6 +23,8 @@ public class CsvSplitter {
 	public static int numThreads;
 	public static int peakRate;
 
+	public static int addedCounts	=	0;
+
 	public static List<String> extractHeadersFromCSV(String inputFileName){
 		try {
 			CSVReader reader = new CSVReader(new FileReader(inputFileName));
@@ -118,9 +120,15 @@ public class CsvSplitter {
 			deltaTs = ts - startTs;
 			deltaTs = (long) (accFactor * deltaTs);
 			tableClass.append(deltaTs, row);
+
+			addedCounts++;
+			if(addedCounts%1000==0){
+				System.out.println("CsvSplitter added counts "+addedCounts);
+			}
 			//System.out.println("ts " + (ts - startTs) + " deltaTs " + deltaTs);
 		}
 
+		System.out.println("CsvSplitter finished adding counts "+addedCounts);
 		reader.close();
 		return tableList;
 	}

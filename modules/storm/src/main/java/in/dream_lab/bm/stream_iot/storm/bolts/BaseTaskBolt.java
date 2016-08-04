@@ -50,6 +50,7 @@ public abstract class BaseTaskBolt extends BaseRichBolt {
                 throw new RuntimeException("Error in task " + task + " for input " + rowString);
             }
         }
+        collector.ack(input);
     }
 
     @Override

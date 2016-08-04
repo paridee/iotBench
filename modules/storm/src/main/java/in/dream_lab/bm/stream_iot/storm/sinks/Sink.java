@@ -48,7 +48,7 @@ public class Sink extends BaseRichBolt {
         } catch (Exception e) {
             e.printStackTrace();
         }
-
+        collector.ack(input);
     }
 
     @Override

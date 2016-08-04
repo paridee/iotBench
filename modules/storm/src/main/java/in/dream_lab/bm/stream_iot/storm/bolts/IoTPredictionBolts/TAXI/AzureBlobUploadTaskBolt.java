@@ -81,6 +81,7 @@ public class AzureBlobUploadTaskBolt extends BaseRichBolt {
                 throw new RuntimeException();
             }
         }
+        collector.ack(input);
     }
 
     @Override

@@ -81,7 +81,7 @@ public class LinearRegressionPredictorBolt extends BaseRichBolt {
                 throw new RuntimeException();
             }
         }
-
+        collector.ack(input);
     }
 
     @Override

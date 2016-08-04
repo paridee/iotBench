@@ -52,6 +52,7 @@ public class AzureTableTaskBolt extends BaseRichBolt {
                 throw new RuntimeException();
             }
         }
+        collector.ack(input);
     }
 
     @Override

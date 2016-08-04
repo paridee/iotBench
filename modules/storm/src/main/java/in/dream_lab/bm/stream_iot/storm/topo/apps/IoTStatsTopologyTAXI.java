@@ -8,6 +8,7 @@ import in.dream_lab.bm.stream_iot.storm.bolts.IoTStatsBolt.*;
 import in.dream_lab.bm.stream_iot.storm.genevents.factory.ArgumentClass;
 import in.dream_lab.bm.stream_iot.storm.genevents.factory.ArgumentParser;
 import in.dream_lab.bm.stream_iot.storm.sinks.Sink;
+import in.dream_lab.bm.stream_iot.storm.spouts.SampleRedisSpout;
 import in.dream_lab.bm.stream_iot.storm.spouts.SampleSpout;
 import org.apache.storm.Config;
 import org.apache.storm.LocalCluster;
@@ -28,7 +29,6 @@ import java.util.Properties;
 public class IoTStatsTopologyTAXI {
 
     public static void main(String[] args) throws Exception {
-
         ArgumentClass argumentClass = ArgumentParser.parserCLI(args);
         if (argumentClass == null) {
             System.out.println("ERROR! INVALID NUMBER OF ARGUMENTS");
@@ -46,7 +46,7 @@ public class IoTStatsTopologyTAXI {
         conf.setDebug(false);
         conf.put("topology.backpressure.enable",false);
 
-        //conf.setNumWorkers(12);
+        conf.setNumWorkers(4);
 
 
         Properties p_=new Properties();
@@ -60,30 +60,31 @@ public class IoTStatsTopologyTAXI {
 //        builder.setSpout("spout1", new SampleSpout(argumentClass.getInputDatasetPathName(), spoutLogFileName, argumentClass.getScalingFactor()),
 //                1);
 
-        String basePathForMultipleSpout="/Users/anshushukla/PycharmProjects/DataAnlytics1/Storm-Scheduler-SC-scripts/TAXI-inputcsv-10spouts200mps-480sec-file/";
+        String basePathForMultipleSpout="/home/paride/benchdataset/";
 
         System.out.println("basePathForMultipleSpout is used -"+basePathForMultipleSpout);
 
-        String spout1InputFilePath=basePathForMultipleSpout+"TAXI-inputcsv-10spouts200mps-480sec-file1.csv";
-        String spout2InputFilePath=basePathForMultipleSpout+"TAXI-inputcsv-10spouts200mps-480sec-file2.csv";
-        String spout3InputFilePath=basePathForMultipleSpout+"TAXI-inputcsv-10spouts200mps-480sec-file3.csv";
-        String spout4InputFilePath=basePathForMultipleSpout+"TAXI-inputcsv-10spouts200mps-480sec-file4.csv";
-        String spout5InputFilePath=basePathForMultipleSpout+"TAXI-inputcsv-10spouts200mps-480sec-file5.csv";
-        String spout6InputFilePath=basePathForMultipleSpout+"TAXI-inputcsv-10spouts200mps-480sec-file6.csv";
-        String spout7InputFilePath=basePathForMultipleSpout+"TAXI-inputcsv-10spouts200mps-480sec-file7.csv";
-        String spout8InputFilePath=basePathForMultipleSpout+"TAXI-inputcsv-10spouts200mps-480sec-file8.csv";
-        String spout9InputFilePath=basePathForMultipleSpout+"TAXI-inputcsv-10spouts200mps-480sec-file9.csv";
-        String spout10InputFilePath=basePathForMultipleSpout+"TAXI-inputcsv-10spouts200mps-480sec-file10.csv";
-
-        builder.setSpout("spout1", new SampleSpout(spout1InputFilePath, spoutLogFileName, argumentClass.getScalingFactor()),
+        String spout1InputFilePath=basePathForMultipleSpout+"datasetTAXI.csv";
+        //String spout1InputFilePath=basePathForMultipleSpout+"TAXI-inputcsv-10spouts200mps-480sec-file1.csv";
+        //String spout2InputFilePath=basePathForMultipleSpout+"TAXI-inputcsv-10spouts200mps-480sec-file2.csv";
+        //String spout3InputFilePath=basePathForMultipleSpout+"TAXI-inputcsv-10spouts200mps-480sec-file3.csv";
+        //String spout4InputFilePath=basePathForMultipleSpout+"TAXI-inputcsv-10spouts200mps-480sec-file4.csv";
+        //String spout5InputFilePath=basePathForMultipleSpout+"TAXI-inputcsv-10spouts200mps-480sec-file5.csv";
+        //String spout6InputFilePath=basePathForMultipleSpout+"TAXI-inputcsv-10spouts200mps-480sec-file6.csv";
+        //String spout7InputFilePath=basePathForMultipleSpout+"TAXI-inputcsv-10spouts200mps-480sec-file7.csv";
+        //String spout8InputFilePath=basePathForMultipleSpout+"TAXI-inputcsv-10spouts200mps-480sec-file8.csv";
+        //String spout9InputFilePath=basePathForMultipleSpout+"TAXI-inputcsv-10spouts200mps-480sec-file9.csv";
+        //String spout10InputFilePath=basePathForMultipleSpout+"TAXI-inputcsv-10spouts200mps-480sec-file10.csv";
+        builder.setSpout("spout1", new SampleRedisSpout(),1);
+        /* builder.setSpout("spout1", new SampleSpout(spout1InputFilePath, spoutLogFileName, argumentClass.getScalingFactor()),
                 1);
-        builder.setSpout("spout2", new SampleSpout(spout2InputFilePath, spoutLogFileName, argumentClass.getScalingFactor()),
+    /*    builder.setSpout("spout2", new SampleSpout(spout2InputFilePath, spoutLogFileName, argumentClass.getScalingFactor()),
                 1);
         builder.setSpout("spout3", new SampleSpout(spout3InputFilePath, spoutLogFileName, argumentClass.getScalingFactor()),
                 1);
         builder.setSpout("spout4", new SampleSpout(spout4InputFilePath, spoutLogFileName, argumentClass.getScalingFactor()),
                 1);
-        builder.setSpout("spout5", new SampleSpout(spout5InputFilePath, spoutLogFileName, argumentClass.getScalingFactor()),
+        builderh.setSpout("spout5", new SampleSpout(spout5InputFilePath, spoutLogFileName, argumentClass.getScalingFactor()),
                 1);
         builder.setSpout("spout6", new SampleSpout(spout6InputFilePath, spoutLogFileName, argumentClass.getScalingFactor()),
                 1);
@@ -94,11 +95,12 @@ public class IoTStatsTopologyTAXI {
         builder.setSpout("spout9", new SampleSpout(spout9InputFilePath, spoutLogFileName, argumentClass.getScalingFactor()),
                 1);
         builder.setSpout("spout10", new SampleSpout(spout10InputFilePath, spoutLogFileName, argumentClass.getScalingFactor()),
-                1);
+                1);*/
 
         builder.setBolt("ParseProjectTAXIBolt",
                 new ParseProjectTAXIBolt(p_), 1)
-                .shuffleGrouping("spout1")
+                .setNumTasks(32)
+                .shuffleGrouping("spout1")/*
                 .shuffleGrouping("spout2")
                 .shuffleGrouping("spout3")
                 .shuffleGrouping("spout4")
@@ -107,40 +109,48 @@ public class IoTStatsTopologyTAXI {
                 .shuffleGrouping("spout7")
                 .shuffleGrouping("spout8")
                 .shuffleGrouping("spout9")
-                .shuffleGrouping("spout10")
+                .shuffleGrouping("spout10")*/
         ;
 
         builder.setBolt("BloomFilterCheckBolt",
                 new BloomFilterCheckBolt(p_), 1)
+                .setNumTasks(32)
                 .fieldsGrouping("ParseProjectTAXIBolt",new Fields("obsType")); // filed grouping on obstype
 
         builder.setBolt("KalmanFilterBolt",
                 new KalmanFilterBolt(p_), 1)
+                .setNumTasks(32)
                 .fieldsGrouping("BloomFilterCheckBolt",new Fields("sensorID","obsType"));
 
 
         builder.setBolt("SimpleLinearRegressionPredictorBolt",
                 new SimpleLinearRegressionPredictorBolt(p_), 1)
+                .setNumTasks(32)
                 .fieldsGrouping("KalmanFilterBolt",new Fields("sensorID","obsType"));
 
         builder.setBolt("BlockWindowAverageBolt",
                 new BlockWindowAverageBolt(p_), 1)
+                .setNumTasks(32)
                 .fieldsGrouping("BloomFilterCheckBolt",new Fields("sensorID","obsType"));
 
 
         builder.setBolt("DistinctApproxCountBolt",
                 new DistinctApproxCountBolt(p_), 1)
+                .setNumTasks(32)
                 .shuffleGrouping("BloomFilterCheckBolt");
 
         builder.setBolt("MQTTPublishTaskBolt",
                 new MQTTPublishTaskBolt(p_), 13)
+                .setNumTasks(32)
                 .shuffleGrouping("SimpleLinearRegressionPredictorBolt")
                 .shuffleGrouping("BlockWindowAverageBolt")
                 .shuffleGrouping("DistinctApproxCountBolt");
 
-        builder.setBolt("sink", new Sink(sinkLogFileName), 1).shuffleGrouping("MQTTPublishTaskBolt");
+        builder.setBolt("sink", new Sink(sinkLogFileName), 1)
+                .setNumTasks(32)
+                .shuffleGrouping("MQTTPublishTaskBolt");
 
-//        builder.setBolt("sink", new Sink(sinkLogFileName), 1).shuffleGrouping("spout");
+//       builder.setBolt("sink", new Sink(sinkLogFileName), 1).shuffleGrouping("spout1");
 
 
         StormTopology stormTopology = builder.createTopology();

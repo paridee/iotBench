@@ -69,6 +69,7 @@ public class BloomFilterCheckBolt extends BaseRichBolt {
                 throw new RuntimeException();
             }
         }
+        collector.ack(input);
     }
 
     @Override

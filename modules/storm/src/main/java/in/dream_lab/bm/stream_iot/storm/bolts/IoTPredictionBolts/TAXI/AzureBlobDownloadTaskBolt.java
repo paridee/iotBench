@@ -58,6 +58,7 @@ public class AzureBlobDownloadTaskBolt extends BaseRichBolt {
 
 
         collector.emit(new Values(BlobModelObject.toByteArray(),msgId,"modelupdate" ));
+        collector.ack(input);
     }
 
     @Override

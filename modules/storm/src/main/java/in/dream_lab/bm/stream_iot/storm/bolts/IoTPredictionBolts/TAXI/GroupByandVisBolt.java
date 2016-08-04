@@ -80,7 +80,7 @@ public class GroupByandVisBolt extends BaseRichBolt {
             wind=0;
         }
 
-
+        collector.ack(input);
         }
 
 

@@ -68,6 +68,7 @@ public class DecisionTreeClassifyBolt extends BaseRichBolt {
                 throw new RuntimeException();
             }
         }
+        collector.ack(input);
     }
 
     @Override

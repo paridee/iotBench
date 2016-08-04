@@ -75,6 +75,7 @@ public class ParseProjectSYSPredictBolt extends BaseRichBolt {
 
 
             }
+        collector.ack(input);
     }
 
     @Override

@@ -74,6 +74,7 @@ public class BlockWindowAverageBolt extends BaseRichBolt {
                 throw new RuntimeException();
             }
         }
+        collector.ack(input);
     }
 
     @Override

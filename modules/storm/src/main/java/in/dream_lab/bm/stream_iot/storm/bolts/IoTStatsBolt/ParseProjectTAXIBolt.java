@@ -79,6 +79,7 @@ public class ParseProjectTAXIBolt extends BaseRichBolt {
                 }
 
             }
+        collector.ack(input);
     }
 
     @Override

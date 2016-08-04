@@ -73,7 +73,7 @@ public class ErrorEstimationBolt extends BaseRichBolt {
 //        if(avgRes!=null ) {
 
             collector.emit(new Values(taxiMeta, obsVal, msgId,analyticsType));
-
+        collector.ack(input);
         }
 
 

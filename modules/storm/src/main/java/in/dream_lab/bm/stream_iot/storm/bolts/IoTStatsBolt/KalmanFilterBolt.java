@@ -72,6 +72,7 @@ public class KalmanFilterBolt extends BaseRichBolt {
                 if (l.isWarnEnabled()) l.warn("Error in KalmanFilterBolt and Val is -"+kalmanUpdatedVal);
                 throw new RuntimeException();
             }
+        collector.ack(input);
     }
 
     @Override

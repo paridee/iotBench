@@ -65,7 +65,7 @@ public class IoTPredictionTopology {
 //                new XMLParsePredictBolt(p_), 1)
 //                .shuffleGrouping("spout");
 
-        builder.setBolt("AzureTableTaskBolt",
+        /*builder.setBolt("AzureTableTaskBolt",
                 new AzureTableTaskBolt(p_), 1)
                 .shuffleGrouping("XMLParseBolt");
 
@@ -80,8 +80,8 @@ public class IoTPredictionTopology {
         builder.setBolt("AzureBlobUploadTaskBolt",
                 new AzureBlobUploadTaskBolt(p_), 1)
                 .shuffleGrouping("LinearRegressionPredictorBolt").shuffleGrouping("DecisionTreeClassifyBolt");
-
-        builder.setBolt("sink", new Sink(sinkLogFileName), 1).shuffleGrouping("AzureBlobUploadTaskBolt");
+*/
+        builder.setBolt("sink", new Sink(sinkLogFileName), 1).shuffleGrouping("spout");
 
 
 

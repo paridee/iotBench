@@ -53,8 +53,9 @@ public class EventGen {
             } else if (outCSVFileName.indexOf("PLUG") != -1) {
                 datasetType = "PLUG";// GlobalConstants.dataSetType = "PLUG";
             }
+            System.out.println("EventGen.java creating");
             List<TableClass> nestedList = CsvSplitter.roundRobinSplitCsvToMemory(csvFileName, numThreads, scalingFactor, datasetType);
-
+            System.out.println("EventGen.java created");
             this.executorService = Executors.newFixedThreadPool(numThreads);
 
             Semaphore sem1 = new Semaphore(0);
@@ -62,6 +63,7 @@ public class EventGen {
             Semaphore sem2 = new Semaphore(0);
 
             SubEventGen[] subEventGenArr = new SubEventGen[numThreads];
+            System.out.println("EventGen.java launching");
             for (int i = 0; i < numThreads; i++) {
                 //this.executorService.execute(new SubEventGen(this.iseg, nestedList.get(i)));
                 subEventGenArr[i] = new SubEventGen(this.iseg, nestedList.get(i), sem1, sem2);

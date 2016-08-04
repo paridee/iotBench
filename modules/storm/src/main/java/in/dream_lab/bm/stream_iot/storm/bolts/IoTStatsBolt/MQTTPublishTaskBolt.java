@@ -64,6 +64,7 @@ public class MQTTPublishTaskBolt extends BaseRichBolt {
         if(publishedRes!=null ) {
                 collector.emit(new Values(publishedRes,msgId));
         }
+        collector.ack(input);
     }
 
     @Override

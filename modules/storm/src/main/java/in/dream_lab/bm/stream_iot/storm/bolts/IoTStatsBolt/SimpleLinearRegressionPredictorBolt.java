@@ -78,7 +78,7 @@ public class SimpleLinearRegressionPredictorBolt extends BaseRichBolt {
             l.info("simpleLinearRegressionPredictorRes:" + resTostring);
             collector.emit(new Values(sensorMeta, obsType, resTostring.toString(), msgId));
         }
-
+        collector.ack(input);
     }
 
     @Override

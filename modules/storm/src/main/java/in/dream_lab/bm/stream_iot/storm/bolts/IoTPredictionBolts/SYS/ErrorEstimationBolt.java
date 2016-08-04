@@ -79,6 +79,7 @@ public class ErrorEstimationBolt extends BaseRichBolt {
 //                if (l.isWarnEnabled()) l.warn("Error in BlockWindowAverageBolt");
 //                throw new RuntimeException();
 //            }
+        collector.ack(input);
         }
 
 

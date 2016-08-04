@@ -69,6 +69,7 @@ public class SampleSpout extends BaseRichSpout implements ISyntheticEventGen {
 			}
 			String rowString = rowStringBuf.toString().substring(1);
 //			String rowString = rowStringBuf.toString();
+			System.out.println("SampleSpout.java: "+rowString);
 			values.add(rowString);
 			msgId++;
 			values.add(Long.toString(msgId));

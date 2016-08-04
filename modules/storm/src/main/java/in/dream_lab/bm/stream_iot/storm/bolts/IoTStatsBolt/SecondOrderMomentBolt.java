@@ -72,6 +72,7 @@ public class SecondOrderMomentBolt extends BaseRichBolt {
                 throw new RuntimeException();
             }
         }
+        collector.ack(input);
     }
 
     @Override

@@ -59,6 +59,7 @@ public class DistinctApproxCountBolt extends BaseRichBolt {
                 throw new RuntimeException();
             }
         }
+        collector.ack(input);
     }
 
     @Override
