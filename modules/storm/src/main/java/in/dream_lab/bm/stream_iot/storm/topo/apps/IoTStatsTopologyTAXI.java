@@ -4,6 +4,7 @@ package in.dream_lab.bm.stream_iot.storm.topo.apps;
  * Created by anshushukla on 03/06/16.
  */
 
+import in.dream_lab.bm.stream_iot.storm.PrometheusConsumer;
 import in.dream_lab.bm.stream_iot.storm.bolts.IoTStatsBolt.*;
 import in.dream_lab.bm.stream_iot.storm.genevents.factory.ArgumentClass;
 import in.dream_lab.bm.stream_iot.storm.genevents.factory.ArgumentParser;
@@ -44,6 +45,7 @@ public class IoTStatsTopologyTAXI {
 
         Config conf = new Config();
         conf.setDebug(false);
+        conf.registerMetricsConsumer(PrometheusConsumer.class,1);
         conf.put("topology.backpressure.enable",false);
 
         conf.setNumWorkers(4);
