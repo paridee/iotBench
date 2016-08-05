@@ -100,7 +100,7 @@ public class IoTStatsTopologyTAXI {
                 1);*/
 
         builder.setBolt("ParseProjectTAXIBolt",
-                new ParseProjectTAXIBolt(p_), 1)
+                new ParseProjectTAXIBolt(p_), 32)
                 .setNumTasks(32)
                 .shuffleGrouping("spout1")/*
                 .shuffleGrouping("spout2")
@@ -115,40 +115,40 @@ public class IoTStatsTopologyTAXI {
         ;
 
         builder.setBolt("BloomFilterCheckBolt",
-                new BloomFilterCheckBolt(p_), 1)
+                new BloomFilterCheckBolt(p_), 32)
                 .setNumTasks(32)
                 .fieldsGrouping("ParseProjectTAXIBolt",new Fields("obsType")); // filed grouping on obstype
 
         builder.setBolt("KalmanFilterBolt",
-                new KalmanFilterBolt(p_), 1)
+                new KalmanFilterBolt(p_), 32)
                 .setNumTasks(32)
                 .fieldsGrouping("BloomFilterCheckBolt",new Fields("sensorID","obsType"));
 
 
         builder.setBolt("SimpleLinearRegressionPredictorBolt",
-                new SimpleLinearRegressionPredictorBolt(p_), 1)
+                new SimpleLinearRegressionPredictorBolt(p_), 32)
                 .setNumTasks(32)
                 .fieldsGrouping("KalmanFilterBolt",new Fields("sensorID","obsType"));
 
         builder.setBolt("BlockWindowAverageBolt",
-                new BlockWindowAverageBolt(p_), 1)
+                new BlockWindowAverageBolt(p_), 32)
                 .setNumTasks(32)
                 .fieldsGrouping("BloomFilterCheckBolt",new Fields("sensorID","obsType"));
 
 
         builder.setBolt("DistinctApproxCountBolt",
-                new DistinctApproxCountBolt(p_), 1)
+                new DistinctApproxCountBolt(p_), 32)
                 .setNumTasks(32)
                 .shuffleGrouping("BloomFilterCheckBolt");
 
         builder.setBolt("MQTTPublishTaskBolt",
-                new MQTTPublishTaskBolt(p_), 13)
+                new MQTTPublishTaskBolt(p_), 32)
                 .setNumTasks(32)
                 .shuffleGrouping("SimpleLinearRegressionPredictorBolt")
                 .shuffleGrouping("BlockWindowAverageBolt")
                 .shuffleGrouping("DistinctApproxCountBolt");
 
-        builder.setBolt("sink", new Sink(sinkLogFileName), 1)
+        builder.setBolt("sink", new Sink(sinkLogFileName), 32)
                 .setNumTasks(32)
                 .shuffleGrouping("MQTTPublishTaskBolt");
 
