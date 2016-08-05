@@ -50,7 +50,6 @@ public class IoTStatsTopologyTAXI {
 
         conf.setNumWorkers(4);
 
-
         Properties p_=new Properties();
         InputStream input = new FileInputStream(taskPropFilename);
         p_.load(input);
