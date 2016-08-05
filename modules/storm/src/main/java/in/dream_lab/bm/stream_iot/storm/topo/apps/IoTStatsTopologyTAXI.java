@@ -48,7 +48,7 @@ public class IoTStatsTopologyTAXI {
         conf.registerMetricsConsumer(PrometheusConsumer.class,1);
         conf.put("topology.backpressure.enable",false);
 
-        conf.setNumWorkers(4);
+        conf.setNumWorkers(64);
 
 
         Properties p_=new Properties();
