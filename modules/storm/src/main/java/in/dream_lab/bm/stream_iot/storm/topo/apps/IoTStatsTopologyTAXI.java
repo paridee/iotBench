@@ -77,7 +77,7 @@ public class IoTStatsTopologyTAXI {
         //String spout8InputFilePath=basePathForMultipleSpout+"TAXI-inputcsv-10spouts200mps-480sec-file8.csv";
         //String spout9InputFilePath=basePathForMultipleSpout+"TAXI-inputcsv-10spouts200mps-480sec-file9.csv";
         //String spout10InputFilePath=basePathForMultipleSpout+"TAXI-inputcsv-10spouts200mps-480sec-file10.csv";
-        builder.setSpout("spout1", new SampleRedisSpout(),1);
+        builder.setSpout("spout1", new SampleRedisSpout(),3);
         /* builder.setSpout("spout1", new SampleSpout(spout1InputFilePath, spoutLogFileName, argumentClass.getScalingFactor()),
                 1);
     /*    builder.setSpout("spout2", new SampleSpout(spout2InputFilePath, spoutLogFileName, argumentClass.getScalingFactor()),
