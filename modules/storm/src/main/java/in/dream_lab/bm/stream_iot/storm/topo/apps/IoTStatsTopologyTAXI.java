@@ -48,7 +48,7 @@ public class IoTStatsTopologyTAXI {
         conf.registerMetricsConsumer(PrometheusConsumer.class,1);
         conf.put("topology.backpressure.enable",false);
 
-        conf.setNumWorkers(8);
+        conf.setNumWorkers(4);
 
 
         Properties p_=new Properties();
@@ -77,7 +77,7 @@ public class IoTStatsTopologyTAXI {
         //String spout8InputFilePath=basePathForMultipleSpout+"TAXI-inputcsv-10spouts200mps-480sec-file8.csv";
         //String spout9InputFilePath=basePathForMultipleSpout+"TAXI-inputcsv-10spouts200mps-480sec-file9.csv";
         //String spout10InputFilePath=basePathForMultipleSpout+"TAXI-inputcsv-10spouts200mps-480sec-file10.csv";
-        builder.setSpout("spout1", new SampleRedisSpout(),3);
+        builder.setSpout("spout1", new SampleRedisSpout(),1);
         /* builder.setSpout("spout1", new SampleSpout(spout1InputFilePath, spoutLogFileName, argumentClass.getScalingFactor()),
                 1);
     /*    builder.setSpout("spout2", new SampleSpout(spout2InputFilePath, spoutLogFileName, argumentClass.getScalingFactor()),
@@ -100,7 +100,7 @@ public class IoTStatsTopologyTAXI {
                 1);*/
 
         builder.setBolt("ParseProjectTAXIBolt",
-                new ParseProjectTAXIBolt(p_), 4)
+                new ParseProjectTAXIBolt(p_), 1)
                 .setNumTasks(32)
                 .shuffleGrouping("spout1")/*
                 .shuffleGrouping("spout2")
@@ -115,29 +115,29 @@ public class IoTStatsTopologyTAXI {
         ;
 
         builder.setBolt("BloomFilterCheckBolt",
-                new BloomFilterCheckBolt(p_), 4)
+                new BloomFilterCheckBolt(p_), 1)
                 .setNumTasks(32)
                 .fieldsGrouping("ParseProjectTAXIBolt",new Fields("obsType")); // filed grouping on obstype
 
         builder.setBolt("KalmanFilterBolt",
-                new KalmanFilterBolt(p_), 4)
+                new KalmanFilterBolt(p_), 1)
                 .setNumTasks(32)
                 .fieldsGrouping("BloomFilterCheckBolt",new Fields("sensorID","obsType"));
 
 
         builder.setBolt("SimpleLinearRegressionPredictorBolt",
-                new SimpleLinearRegressionPredictorBolt(p_), 4)
+                new SimpleLinearRegressionPredictorBolt(p_), 1)
                 .setNumTasks(32)
                 .fieldsGrouping("KalmanFilterBolt",new Fields("sensorID","obsType"));
 
         builder.setBolt("BlockWindowAverageBolt",
-                new BlockWindowAverageBolt(p_), 4)
+                new BlockWindowAverageBolt(p_), 1)
                 .setNumTasks(32)
                 .fieldsGrouping("BloomFilterCheckBolt",new Fields("sensorID","obsType"));
 
 
         builder.setBolt("DistinctApproxCountBolt",
-                new DistinctApproxCountBolt(p_), 4)
+                new DistinctApproxCountBolt(p_), 1)
                 .setNumTasks(32)
                 .shuffleGrouping("BloomFilterCheckBolt");
 
@@ -148,7 +148,7 @@ public class IoTStatsTopologyTAXI {
                 .shuffleGrouping("BlockWindowAverageBolt")
                 .shuffleGrouping("DistinctApproxCountBolt");
 
-        builder.setBolt("sink", new Sink(sinkLogFileName), 4)
+        builder.setBolt("sink", new Sink(sinkLogFileName), 1)
                 .setNumTasks(32)
                 .shuffleGrouping("MQTTPublishTaskBolt");
 
