@@ -60,7 +60,9 @@ public class SampleRedisSpout extends BaseRichSpout {
             }while(sleep==null);
             int sleepTime	=	Integer.parseInt(sleep);
             String json	=	jedis.get("json");
-            if(json!=null){
+            String lock =   jedis.get("lock");
+            if((json!=null)&&(lock==null)){
+                jedis.set("lock","locked");
                 jedis.del("json");
                 JSONArray array	=	new JSONArray(json);
                 for(int i=0;i<array.length();i++){
@@ -73,6 +75,7 @@ public class SampleRedisSpout extends BaseRichSpout {
                     this._collector.emit(values,msgId);
                     //System.out.println("Reader.java: row "+row);
                 }
+                jedis.del("lock");
             }
             beg	=	System.currentTimeMillis()-beg;
             try {
