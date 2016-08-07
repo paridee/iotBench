@@ -114,13 +114,13 @@ public class IoTStatsTopologyTAXI {
                 .shuffleGrouping("spout10")*/
         ;
 
-        builder.setBolt("sink", new Sink(sinkLogFileName), 1).shuffleGrouping("ParseProjectTAXIBolt");
-/*
+
         builder.setBolt("BloomFilterCheckBolt",
                 new BloomFilterCheckBolt(p_), 4)
                 .setNumTasks(32)
                 .fieldsGrouping("ParseProjectTAXIBolt",new Fields("obsType")); // filed grouping on obstype
-
+        builder.setBolt("sink", new Sink(sinkLogFileName), 1).shuffleGrouping("BloomFilterCheckBolt");
+/*
         builder.setBolt("KalmanFilterBolt",
                 new KalmanFilterBolt(p_), 4)
                 .setNumTasks(32)
