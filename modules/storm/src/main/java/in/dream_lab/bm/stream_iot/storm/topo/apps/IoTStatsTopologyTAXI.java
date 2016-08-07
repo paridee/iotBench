@@ -141,12 +141,14 @@ public class IoTStatsTopologyTAXI {
 
         builder.setBolt("sink2", new Sink(sinkLogFileName), 1).shuffleGrouping("BlockWindowAverageBolt");
 
-/*
         builder.setBolt("DistinctApproxCountBolt",
                 new DistinctApproxCountBolt(p_), 4)
                 .setNumTasks(32)
                 .shuffleGrouping("BloomFilterCheckBolt");
 
+        builder.setBolt("sink2", new Sink(sinkLogFileName), 1).shuffleGrouping("DistinctApproxCountBolt");
+
+        /*
         builder.setBolt("MQTTPublishTaskBolt",
                 new MQTTPublishTaskBolt(p_), 13)
                 .setNumTasks(32)
