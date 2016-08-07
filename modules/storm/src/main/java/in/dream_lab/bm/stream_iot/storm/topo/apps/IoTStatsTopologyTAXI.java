@@ -119,13 +119,13 @@ public class IoTStatsTopologyTAXI {
                 new BloomFilterCheckBolt(p_), 4)
                 .setNumTasks(32)
                 .fieldsGrouping("ParseProjectTAXIBolt",new Fields("obsType")); // filed grouping on obstype
-        builder.setBolt("sink", new Sink(sinkLogFileName), 1).shuffleGrouping("BloomFilterCheckBolt");
-/*
+
         builder.setBolt("KalmanFilterBolt",
                 new KalmanFilterBolt(p_), 4)
                 .setNumTasks(32)
                 .fieldsGrouping("BloomFilterCheckBolt",new Fields("sensorID","obsType"));
-
+        builder.setBolt("sink", new Sink(sinkLogFileName), 1).shuffleGrouping("KalmanFilterBolt");
+/*
 
         builder.setBolt("SimpleLinearRegressionPredictorBolt",
                 new SimpleLinearRegressionPredictorBolt(p_), 4)
