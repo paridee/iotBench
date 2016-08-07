@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="21f35c86-7a1f-4dba-bf4d-fe26c51d6630" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/storm/src/main/java/in/dream_lab/bm/stream_iot/storm/spouts/SampleRedisSpout.java" afterPath="$PROJECT_DIR$/modules/storm/src/main/java/in/dream_lab/bm/stream_iot/storm/spouts/SampleRedisSpout.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/storm/src/main/java/in/dream_lab/bm/stream_iot/storm/topo/apps/IoTStatsTopologyTAXI.java" afterPath="$PROJECT_DIR$/modules/storm/src/main/java/in/dream_lab/bm/stream_iot/storm/topo/apps/IoTStatsTopologyTAXI.java" />
     </list>
     <ignored path="iot-bm.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -30,7 +30,7 @@
       <file leaf-file-name="ParseProjectTAXIBolt.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/modules/storm/src/main/java/in/dream_lab/bm/stream_iot/storm/bolts/IoTStatsBolt/ParseProjectTAXIBolt.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="455">
+            <state relative-caret-position="-345">
               <caret line="56" column="0" selection-start-line="56" selection-start-column="0" selection-end-line="56" selection-end-column="0" />
               <folding />
             </state>
@@ -40,13 +40,9 @@
       <file leaf-file-name="SecondOrderMomentBolt.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/modules/storm/src/main/java/in/dream_lab/bm/stream_iot/storm/bolts/IoTStatsBolt/SecondOrderMomentBolt.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="885">
+            <state relative-caret-position="15">
               <caret line="74" column="29" selection-start-line="74" selection-start-column="29" selection-end-line="74" selection-end-column="29" />
-              <folding>
-                <element signature="imports" expanded="false" />
-                <element signature="e#713#714#0" expanded="false" />
-                <element signature="e#734#735#0" expanded="false" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -54,24 +50,19 @@
       <file leaf-file-name="SimpleLinearRegressionPredictorBolt.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/modules/storm/src/main/java/in/dream_lab/bm/stream_iot/storm/bolts/IoTStatsBolt/SimpleLinearRegressionPredictorBolt.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="975">
+            <state relative-caret-position="13">
               <caret line="80" column="29" selection-start-line="80" selection-start-column="29" selection-end-line="80" selection-end-column="29" />
-              <folding>
-                <element signature="imports" expanded="false" />
-                <element signature="e#752#753#0" expanded="false" />
-                <element signature="e#773#774#0" expanded="false" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="IoTStatsTopologyTAXI.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="IoTStatsTopologyTAXI.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/modules/storm/src/main/java/in/dream_lab/bm/stream_iot/storm/topo/apps/IoTStatsTopologyTAXI.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1860">
-              <caret line="150" column="60" selection-start-line="150" selection-start-column="60" selection-end-line="150" selection-end-column="60" />
+            <state relative-caret-position="345">
+              <caret line="155" column="2" selection-start-line="155" selection-start-column="2" selection-end-line="155" selection-end-column="2" />
               <folding>
-                <element signature="imports" expanded="false" />
                 <element signature="e#2688#2790#0" expanded="false" />
               </folding>
             </state>
@@ -83,11 +74,7 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="870">
               <caret line="73" column="29" selection-start-line="73" selection-start-column="29" selection-end-line="73" selection-end-column="29" />
-              <folding>
-                <element signature="imports" expanded="false" />
-                <element signature="e#715#716#0" expanded="false" />
-                <element signature="e#736#737#0" expanded="false" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -95,21 +82,17 @@
       <file leaf-file-name="Sink.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/modules/storm/src/main/java/in/dream_lab/bm/stream_iot/storm/sinks/Sink.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="585">
+            <state relative-caret-position="267">
               <caret line="50" column="16" selection-start-line="50" selection-start-column="16" selection-end-line="50" selection-end-column="16" />
-              <folding>
-                <element signature="imports" expanded="false" />
-                <element signature="e#866#867#0" expanded="false" />
-                <element signature="e#926#927#0" expanded="false" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SampleRedisSpout.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="SampleRedisSpout.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/modules/storm/src/main/java/in/dream_lab/bm/stream_iot/storm/spouts/SampleRedisSpout.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="424">
+            <state relative-caret-position="10">
               <caret line="77" column="31" selection-start-line="77" selection-start-column="31" selection-end-line="77" selection-end-column="31" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -123,7 +106,9 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="1590">
               <caret line="117" column="26" selection-start-line="117" selection-start-column="26" selection-end-line="117" selection-end-column="26" />
-              <folding />
+              <folding>
+                <element signature="imports" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -131,8 +116,8 @@
       <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/modules/storm/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1125">
-              <caret line="75" column="10" selection-start-line="75" selection-start-column="10" selection-end-line="75" selection-end-column="10" />
+            <state relative-caret-position="45">
+              <caret line="75" column="11" selection-start-line="75" selection-start-column="11" selection-end-line="75" selection-end-column="11" />
               <folding />
             </state>
           </provider>
@@ -201,9 +186,9 @@
         <option value="$PROJECT_DIR$/modules/storm/src/main/java/in/dream_lab/bm/stream_iot/storm/bolts/IoTStatsBolt/SecondOrderMomentBolt.java" />
         <option value="$PROJECT_DIR$/modules/storm/src/main/java/in/dream_lab/bm/stream_iot/storm/bolts/IoTStatsBolt/SimpleLinearRegressionPredictorBolt.java" />
         <option value="$PROJECT_DIR$/modules/storm/src/main/java/in/dream_lab/bm/stream_iot/storm/PrometheusConsumer.java" />
+        <option value="$PROJECT_DIR$/modules/storm/src/main/java/in/dream_lab/bm/stream_iot/storm/spouts/SampleRedisSpout.java" />
         <option value="$PROJECT_DIR$/modules/storm/pom.xml" />
         <option value="$PROJECT_DIR$/modules/storm/src/main/java/in/dream_lab/bm/stream_iot/storm/topo/apps/IoTStatsTopologyTAXI.java" />
-        <option value="$PROJECT_DIR$/modules/storm/src/main/java/in/dream_lab/bm/stream_iot/storm/spouts/SampleRedisSpout.java" />
       </list>
     </option>
   </component>
@@ -220,10 +205,10 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="1794" />
-    <option name="y" value="190" />
-    <option name="width" value="1280" />
-    <option name="height" value="812" />
+    <option name="x" value="-1" />
+    <option name="y" value="24" />
+    <option name="width" value="1602" />
+    <option name="height" value="852" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -250,7 +235,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -691,8 +675,9 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
+      <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -708,7 +693,7 @@
       </extension>
       <option name="MAIN_CLASS_NAME" value="in.dream_lab.bm.stream_iot.storm.topo.apps.IoTStatsTopologyTAXI" />
       <option name="VM_PARAMETERS" value="" />
-      <option name="PROGRAM_PARAMETERS" value="L IdentityTopology $USER_HOME$/benchdataset/datasetTAXI.csv TAXI-210 0.00001 $USER_HOME$/benchlogs $USER_HOME$/tasks.properties test" />
+      <option name="PROGRAM_PARAMETERS" value="C IdentityTopology $USER_HOME$/benchdataset/datasetTAXI.csv TAXI-210 0.00001 $USER_HOME$/benchlogs $USER_HOME$/tasks.properties test" />
       <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
@@ -1005,28 +990,28 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1794" y="190" width="1280" height="812" extended-state="0" />
+    <frame x="-1" y="24" width="1602" height="852" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32909605" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.34625667" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24732621" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.48904538" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.365625" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32909605" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -1093,7 +1078,6 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="false" />
             <element signature="e#2688#2790#0" expanded="false" />
           </folding>
         </state>
@@ -1125,11 +1109,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="435">
           <caret line="40" column="55" selection-start-line="40" selection-start-column="55" selection-end-line="40" selection-end-column="55" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#866#867#0" expanded="false" />
-            <element signature="e#926#927#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1146,7 +1126,6 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="false" />
             <element signature="e#2688#2790#0" expanded="false" />
           </folding>
         </state>
@@ -1355,6 +1334,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="855">
           <caret line="71" column="29" selection-start-line="71" selection-start-column="29" selection-end-line="71" selection-end-column="29" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1362,6 +1342,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="705">
           <caret line="61" column="29" selection-start-line="61" selection-start-column="29" selection-end-line="61" selection-end-column="29" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1369,6 +1350,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="885">
           <caret line="74" column="29" selection-start-line="74" selection-start-column="29" selection-end-line="74" selection-end-column="29" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1376,6 +1358,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="780">
           <caret line="66" column="29" selection-start-line="66" selection-start-column="29" selection-end-line="66" selection-end-column="29" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1386,51 +1369,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/modules/storm/src/main/java/in/dream_lab/bm/stream_iot/storm/bolts/IoTStatsBolt/SecondOrderMomentBolt.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="885">
-          <caret line="74" column="29" selection-start-line="74" selection-start-column="29" selection-end-line="74" selection-end-column="29" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#713#714#0" expanded="false" />
-            <element signature="e#734#735#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/modules/storm/src/main/java/in/dream_lab/bm/stream_iot/storm/bolts/IoTStatsBolt/SimpleLinearRegressionPredictorBolt.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="975">
-          <caret line="80" column="29" selection-start-line="80" selection-start-column="29" selection-end-line="80" selection-end-column="29" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#752#753#0" expanded="false" />
-            <element signature="e#773#774#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/modules/storm/src/main/java/in/dream_lab/bm/stream_iot/storm/bolts/IoTStatsBolt/BlockWindowAverageBolt.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="870">
           <caret line="73" column="29" selection-start-line="73" selection-start-column="29" selection-end-line="73" selection-end-column="29" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#715#716#0" expanded="false" />
-            <element signature="e#736#737#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/modules/storm/src/main/java/in/dream_lab/bm/stream_iot/storm/sinks/Sink.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="585">
-          <caret line="50" column="16" selection-start-line="50" selection-start-column="16" selection-end-line="50" selection-end-column="16" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#866#867#0" expanded="false" />
-            <element signature="e#926#927#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1446,43 +1389,68 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1590">
           <caret line="117" column="26" selection-start-line="117" selection-start-column="26" selection-end-line="117" selection-end-column="26" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/storm/src/main/java/in/dream_lab/bm/stream_iot/storm/spouts/SampleRedisSpout.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="10">
+          <caret line="77" column="31" selection-start-line="77" selection-start-column="31" selection-end-line="77" selection-end-column="31" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/modules/storm/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1125">
-          <caret line="75" column="10" selection-start-line="75" selection-start-column="10" selection-end-line="75" selection-end-column="10" />
+        <state relative-caret-position="45">
+          <caret line="75" column="11" selection-start-line="75" selection-start-column="11" selection-end-line="75" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/storm/src/main/java/in/dream_lab/bm/stream_iot/storm/bolts/IoTStatsBolt/ParseProjectTAXIBolt.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-345">
+          <caret line="56" column="0" selection-start-line="56" selection-start-column="0" selection-end-line="56" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/storm/src/main/java/in/dream_lab/bm/stream_iot/storm/sinks/Sink.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="267">
+          <caret line="50" column="16" selection-start-line="50" selection-start-column="16" selection-end-line="50" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/storm/src/main/java/in/dream_lab/bm/stream_iot/storm/bolts/IoTStatsBolt/SimpleLinearRegressionPredictorBolt.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="13">
+          <caret line="80" column="29" selection-start-line="80" selection-start-column="29" selection-end-line="80" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/storm/src/main/java/in/dream_lab/bm/stream_iot/storm/bolts/IoTStatsBolt/SecondOrderMomentBolt.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="74" column="29" selection-start-line="74" selection-start-column="29" selection-end-line="74" selection-end-column="29" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/modules/storm/src/main/java/in/dream_lab/bm/stream_iot/storm/topo/apps/IoTStatsTopologyTAXI.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1860">
-          <caret line="150" column="60" selection-start-line="150" selection-start-column="60" selection-end-line="150" selection-end-column="60" />
+        <state relative-caret-position="345">
+          <caret line="155" column="2" selection-start-line="155" selection-start-column="2" selection-end-line="155" selection-end-column="2" />
           <folding>
-            <element signature="imports" expanded="false" />
             <element signature="e#2688#2790#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/modules/storm/src/main/java/in/dream_lab/bm/stream_iot/storm/bolts/IoTStatsBolt/ParseProjectTAXIBolt.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="455">
-          <caret line="56" column="0" selection-start-line="56" selection-start-column="0" selection-end-line="56" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/modules/storm/src/main/java/in/dream_lab/bm/stream_iot/storm/spouts/SampleRedisSpout.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="424">
-          <caret line="77" column="31" selection-start-line="77" selection-start-column="31" selection-end-line="77" selection-end-column="31" />
-          <folding>
-            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
