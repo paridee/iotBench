@@ -124,14 +124,16 @@ public class IoTStatsTopologyTAXI {
                 new KalmanFilterBolt(p_), 4)
                 .setNumTasks(32)
                 .fieldsGrouping("BloomFilterCheckBolt",new Fields("sensorID","obsType"));
-        builder.setBolt("sink", new Sink(sinkLogFileName), 1).shuffleGrouping("KalmanFilterBolt");
-/*
+
+
 
         builder.setBolt("SimpleLinearRegressionPredictorBolt",
                 new SimpleLinearRegressionPredictorBolt(p_), 4)
                 .setNumTasks(32)
                 .fieldsGrouping("KalmanFilterBolt",new Fields("sensorID","obsType"));
 
+        builder.setBolt("sink", new Sink(sinkLogFileName), 1).shuffleGrouping("SimpleLinearRegressionPredictorBolt");
+        /*
         builder.setBolt("BlockWindowAverageBolt",
                 new BlockWindowAverageBolt(p_), 4)
                 .setNumTasks(32)
